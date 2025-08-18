@@ -1,4 +1,4 @@
-package com.raj.travel.udan.services.connection.db.entity.base;
+package com.raj.travels.udan.connection_service.db.entity.base;
 
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
  *
  * @author Yubraj Sahoo
  * @version 1.0
- * @date 2-7-2025
+ * @date 9-8-2025
  */
 @MappedSuperclass
 @Getter
@@ -25,10 +25,10 @@ public abstract class BaseEntity {
     private LocalDateTime updatedAt;
 
     @Column(nullable = false)
-    private Integer companyId = 1;
+    private int companyId = 1;
 
     @Column(nullable = false)
-    private Boolean active = true;
+    private boolean active = true;
 
     @PrePersist
     protected void onCreate() {

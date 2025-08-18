@@ -1,8 +1,9 @@
-package com.raj.travel.udan.services.connection.db.entity;
+package com.raj.travels.udan.connection_service.db.entity;
 
-import com.raj.travel.udan.services.connection.converter.Base64AttributeConverter;
-import com.raj.travel.udan.services.connection.db.entity.base.BaseEntity;
-import com.raj.travel.udan.services.connection.enums.GdsType;
+import com.raj.travels.udan.connection_service.db.entity.base.BaseEntity;
+import com.raj.travels.udan.connection_service.db.entity.converter.Base64AttributeConverter;
+import com.raj.travels.udan.travel_domain.enums.connection.ConnectionType;
+import com.raj.travels.udan.travel_domain.enums.connection.GdsType;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,12 +27,14 @@ public class ConnectionCredentials extends BaseEntity {
     @GeneratedValue(strategy = IDENTITY)
     private Long id;
 
-    private String serviceId;
+    @Enumerated(EnumType.STRING)
+    private ConnectionType connectionType;
 
     @Enumerated(EnumType.STRING)
     private GdsType gdsType;
 
-    private String serviceName;
+    @Column(nullable = false)
+    private String grandType;
 
     @Convert(converter = Base64AttributeConverter.class)
     private String apiKey;
