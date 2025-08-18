@@ -12,7 +12,7 @@ import lombok.Data;
  * @date 19-6-2025
  */
 @Data
-public class SecurityResponse {
+public class AuthenticationResponse {
     private String status;
     private String securityToken;
     private ConnectionType tokenType;

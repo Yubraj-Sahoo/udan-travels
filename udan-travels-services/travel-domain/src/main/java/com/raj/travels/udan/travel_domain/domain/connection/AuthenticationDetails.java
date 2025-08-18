@@ -13,7 +13,7 @@ import lombok.Data;
  * @date 19-6-2025
  */
 @Data
-public class SecurityDetails {
+public class AuthenticationDetails {
     private String type;
     private String userName;
     private ConnectionType connectionType;

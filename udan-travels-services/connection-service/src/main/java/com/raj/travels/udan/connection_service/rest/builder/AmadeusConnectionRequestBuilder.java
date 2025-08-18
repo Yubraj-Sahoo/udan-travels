@@ -12,7 +12,7 @@ import org.springframework.http.HttpEntity;
  * @version 1.0
  * @date 19-6-2025
  */
-public interface ConnectionBuilder {
+public interface AmadeusConnectionRequestBuilder {
     /**
      * Builds a connection request string based on the provided connection credentials.
      *

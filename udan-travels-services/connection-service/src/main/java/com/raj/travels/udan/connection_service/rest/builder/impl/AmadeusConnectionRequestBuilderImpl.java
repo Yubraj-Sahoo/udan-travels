@@ -1,7 +1,7 @@
 package com.raj.travels.udan.connection_service.rest.builder.impl;
 
 import com.raj.travels.udan.connection_service.db.entities.ConnectionCredentials;
-import com.raj.travels.udan.connection_service.rest.builder.ConnectionBuilder;
+import com.raj.travels.udan.connection_service.rest.builder.AmadeusConnectionRequestBuilder;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.util.UriComponentsBuilder;
 
 /**
- * Implementation of the ConnectionBuilder interface for building Amadeus connection requests.
+ * Implementation of the AmadeusConnectionRequestBuilder interface for building Amadeus connection requests.
  * This class constructs the HTTP entity required to request a security token from the Amadeus API.
  *
  * @author Yubraj Sahoo
@@ -19,7 +19,7 @@ import org.springframework.web.util.UriComponentsBuilder;
  */
 @Service
 @Qualifier("amadeusConnectionBuilder")
-public class AmadeusConnectionBuilderImpl implements ConnectionBuilder {
+public class AmadeusConnectionRequestBuilderImpl implements AmadeusConnectionRequestBuilder {
     /**
      * Builds a connection request string based on the provided connection credentials.
      *
