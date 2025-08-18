@@ -1,4 +1,4 @@
-package com.raj.travels.udan.connection_service.db.entities.converter;
+package com.raj.travels.udan.connection_service.db.converter;
 
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;

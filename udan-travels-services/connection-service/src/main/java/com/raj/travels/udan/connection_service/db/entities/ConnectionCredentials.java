@@ -1,7 +1,7 @@
 package com.raj.travels.udan.connection_service.db.entities;
 
 import com.raj.travels.udan.connection_service.db.entities.base.BaseEntity;
-import com.raj.travels.udan.connection_service.db.entities.converter.Base64AttributeConverter;
+import com.raj.travels.udan.connection_service.db.converter.Base64AttributeConverter;
 import com.raj.travels.udan.travel_domain.enums.connection.ConnectionType;
 import com.raj.travels.udan.travel_domain.enums.connection.GdsType;
 import jakarta.persistence.*;
@@ -34,7 +34,7 @@ public class ConnectionCredentials extends BaseEntity {
     private GdsType gdsType;
 
     @Column(nullable = false)
-    private String grandType;
+    private String grantType;
 
     @Convert(converter = Base64AttributeConverter.class)
     private String apiKey;

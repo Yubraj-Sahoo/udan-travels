@@ -32,7 +32,7 @@ public class AmadeusConnectionBuilderImpl implements ConnectionBuilder {
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
         String formEncodedBody = UriComponentsBuilder.newInstance()
-                .queryParam("grant_type", connection.getGrandType())
+                .queryParam("grant_type", connection.getGrantType())
                 .queryParam("client_id", connection.getApiKey())
                 .queryParam("client_secret", connection.getApiSecret())
                 .build()

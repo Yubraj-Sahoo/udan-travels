@@ -26,7 +26,7 @@ class ConnectionCredentialsRepositoryTest {
         ConnectionCredentials connectionCredentials = connectionCredentialsRepository.findByGdsTypeAndConnectionType(gdsType, connectionType);
 
         assertNotNull(connectionCredentials, "ConnectionCredentials should not be null");
-        assertNotNull(connectionCredentials.getGrandType(), "GrandType should not be null");
+        assertNotNull(connectionCredentials.getGrantType(), "GrandType should not be null");
         assertNotNull(connectionCredentials.getApiKey(), "API Key should not be null");
         assertNotNull(connectionCredentials.getApiSecret(), "API secret should not be null");
     }
@@ -38,7 +38,7 @@ class ConnectionCredentialsRepositoryTest {
 
         connectionCredentials.setConnectionType(ConnectionType.Y_FLIGHT);
         connectionCredentials.setGdsType(GdsType.AMADEUS);
-        connectionCredentials.setGrandType("");
+        connectionCredentials.setGrantType("");
         connectionCredentials.setApiKey("");
         connectionCredentials.setApiSecret("");
 
