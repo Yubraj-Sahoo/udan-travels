@@ -1,6 +1,6 @@
-package com.raj.travels.udan.connection_service.integration.db.repository;
+package com.raj.travels.udan.connection_service.db.repositories;
 
-import com.raj.travels.udan.connection_service.db.entity.ConnectionCredentials;
+import com.raj.travels.udan.connection_service.db.entities.ConnectionCredentials;
 import com.raj.travels.udan.travel_domain.enums.connection.ConnectionType;
 import com.raj.travels.udan.travel_domain.enums.connection.GdsType;
 import org.springframework.data.jpa.repository.JpaRepository;

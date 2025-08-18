@@ -1,7 +1,7 @@
-package com.raj.travels.udan.connection_service.db.entity;
+package com.raj.travels.udan.connection_service.db.entities;
 
-import com.raj.travels.udan.connection_service.db.entity.base.BaseEntity;
-import com.raj.travels.udan.connection_service.db.entity.converter.Base64AttributeConverter;
+import com.raj.travels.udan.connection_service.db.entities.base.BaseEntity;
+import com.raj.travels.udan.connection_service.db.entities.converter.Base64AttributeConverter;
 import com.raj.travels.udan.travel_domain.enums.connection.ConnectionType;
 import com.raj.travels.udan.travel_domain.enums.connection.GdsType;
 import jakarta.persistence.*;

@@ -1,4 +1,4 @@
-package com.raj.travels.udan.connection_service.db.entity.base;
+package com.raj.travels.udan.connection_service.db.entities.base;
 
 import jakarta.persistence.*;
 import lombok.Getter;

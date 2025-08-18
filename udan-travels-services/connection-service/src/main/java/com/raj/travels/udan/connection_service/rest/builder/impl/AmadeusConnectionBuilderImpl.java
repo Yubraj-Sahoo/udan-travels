@@ -1,6 +1,6 @@
 package com.raj.travels.udan.connection_service.rest.builder.impl;
 
-import com.raj.travels.udan.connection_service.db.entity.ConnectionCredentials;
+import com.raj.travels.udan.connection_service.db.entities.ConnectionCredentials;
 import com.raj.travels.udan.connection_service.rest.builder.ConnectionBuilder;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.http.HttpEntity;
@@ -27,7 +27,7 @@ public class AmadeusConnectionBuilderImpl implements ConnectionBuilder {
      * @return the connection request string
      */
     @Override
-    public HttpEntity<String> buildConnectionRequest(ConnectionCredentials connection) {
+    public HttpEntity<String> build(ConnectionCredentials connection) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 

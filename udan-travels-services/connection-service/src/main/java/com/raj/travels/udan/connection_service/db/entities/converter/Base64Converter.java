@@ -1,4 +1,4 @@
-package com.raj.travels.udan.connection_service.db.entity.converter;
+package com.raj.travels.udan.connection_service.db.entities.converter;
 
 /**
  * Utility class for converting strings to and from Base64 encoding.

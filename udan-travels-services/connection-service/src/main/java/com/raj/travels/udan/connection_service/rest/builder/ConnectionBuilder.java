@@ -1,6 +1,6 @@
 package com.raj.travels.udan.connection_service.rest.builder;
 
-import com.raj.travels.udan.connection_service.db.entity.ConnectionCredentials;
+import com.raj.travels.udan.connection_service.db.entities.ConnectionCredentials;
 import org.springframework.http.HttpEntity;
 
 /**
@@ -19,5 +19,5 @@ public interface ConnectionBuilder {
      * @param connection the connection credentials to build the request for
      * @return the connection request string
      */
-    HttpEntity<String> buildConnectionRequest(ConnectionCredentials connection);
+    HttpEntity<String> build(ConnectionCredentials connection);
 }

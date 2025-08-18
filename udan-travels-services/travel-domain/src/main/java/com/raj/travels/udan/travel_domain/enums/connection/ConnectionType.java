@@ -12,7 +12,8 @@ import lombok.Getter;
  */
 @Getter
 public enum ConnectionType {
-    AMADEUS_TEST(GdsType.AMADEUS,"amd-test");
+    Y_FLIGHT(GdsType.AMADEUS, "y-flight"),
+    UDAN_TRAVELS(GdsType.AMADEUS, "udan-travels");
 
     private final GdsType gdsType;
     private final String serviceId;
