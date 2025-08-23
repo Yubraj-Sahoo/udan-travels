@@ -30,7 +30,7 @@ public class ConnectionController {
     @GetMapping("/amadeus/{connection}")
     public ResponseEntity<AuthenticationResponse> getAmadeusAuthenticationToken(
             @PathVariable("connection") String connection) {
-        log.info("Received request to get Amadeus authentication token for connection: {}",connection);
+        log.info("Received request to get Amadeus authentication token for connection: {}", connection);
         ConnectionType connectionType = ConnectionType.fromServiceId(connection);
         AuthenticationResponse response = connectionService.getConnection(connectionType);
         return ResponseEntity.ok(response);
