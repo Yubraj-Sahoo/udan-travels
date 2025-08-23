@@ -1,4 +1,4 @@
-package com.raj.travels.udan.connection_service.rest.service;
+package com.raj.travels.udan.connection_service.rest;
 
 import com.raj.travels.udan.connection_service.db.entities.ConnectionCredentials;
 import com.raj.travels.udan.travel_domain.domain.connection.AuthenticationDetails;

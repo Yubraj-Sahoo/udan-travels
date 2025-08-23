@@ -1,6 +1,7 @@
 package com.raj.travels.udan.travel_domain.dto.connection;
 
 import com.raj.travels.udan.travel_domain.enums.connection.ConnectionType;
+import lombok.Builder;
 import lombok.Data;
 
 /**
@@ -12,6 +13,7 @@ import lombok.Data;
  * @date 19-6-2025
  */
 @Data
+@Builder
 public class AuthenticationResponse {
     private String status;
     private String securityToken;

@@ -1,13 +1,14 @@
-package com.raj.travels.udan.connection_service.rest.builder.impl;
+package com.raj.travels.udan.connection_service.rest.amadeus.builder.impl;
 
 import com.raj.travels.udan.connection_service.db.entities.ConnectionCredentials;
-import com.raj.travels.udan.connection_service.rest.builder.AmadeusConnectionRequestBuilder;
-import org.springframework.beans.factory.annotation.Qualifier;
+import com.raj.travels.udan.connection_service.rest.amadeus.builder.AmadeusConnectionRequestBuilder;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.UriComponentsBuilder;
+
+import java.util.Objects;
 
 /**
  * Implementation of the AmadeusConnectionRequestBuilder interface for building Amadeus connection requests.
@@ -18,7 +19,6 @@ import org.springframework.web.util.UriComponentsBuilder;
  * @date 19-6-2025
  */
 @Service
-@Qualifier("amadeusConnectionBuilder")
 public class AmadeusConnectionRequestBuilderImpl implements AmadeusConnectionRequestBuilder {
     /**
      * Builds a connection request string based on the provided connection credentials.
@@ -28,6 +28,8 @@ public class AmadeusConnectionRequestBuilderImpl implements AmadeusConnectionReq
      */
     @Override
     public HttpEntity<String> build(ConnectionCredentials connection) {
+        validateConnection(connection);
+
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
 
@@ -40,5 +42,18 @@ public class AmadeusConnectionRequestBuilderImpl implements AmadeusConnectionReq
                 .substring(1); // remove leading '?'
 
         return new HttpEntity<>(formEncodedBody, headers);
+    }
+
+    /**
+     * Validates the connection credentials.
+     *
+     * @param connection the connection credentials to validate
+     */
+    private void validateConnection(ConnectionCredentials connection) {
+        if (Objects.isNull(connection) || Objects.isNull(connection.getApiKey())
+                || Objects.isNull(connection.getApiSecret())
+                || Objects.isNull(connection.getGrantType())) {
+            throw new IllegalArgumentException("Invalid connection credentials provided for Amadeus connection request.");
+        }
     }
 }

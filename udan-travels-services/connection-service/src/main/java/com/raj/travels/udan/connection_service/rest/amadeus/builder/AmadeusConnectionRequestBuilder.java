@@ -1,4 +1,4 @@
-package com.raj.travels.udan.connection_service.rest.builder;
+package com.raj.travels.udan.connection_service.rest.amadeus.builder;
 
 import com.raj.travels.udan.connection_service.db.entities.ConnectionCredentials;
 import org.springframework.http.HttpEntity;
