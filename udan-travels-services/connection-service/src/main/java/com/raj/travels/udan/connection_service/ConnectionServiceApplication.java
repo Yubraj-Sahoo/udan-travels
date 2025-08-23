@@ -1,8 +1,11 @@
 package com.raj.travels.udan.connection_service;
 
+import com.raj.travels.udan.connection_service.interceptor.RestCallLoggingInterceptor;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.client.BufferingClientHttpRequestFactory;
+import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 
 /**
@@ -27,7 +30,10 @@ public class ConnectionServiceApplication {
      * @return a new instance of RestTemplate
      */
     @Bean
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
+    public RestTemplate restTemplate(RestCallLoggingInterceptor interceptor) {
+        RestTemplate restTemplate = new RestTemplate(new BufferingClientHttpRequestFactory(new SimpleClientHttpRequestFactory()));
+        restTemplate.getInterceptors().add(interceptor);
+        return restTemplate;
     }
+
 }

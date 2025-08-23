@@ -4,6 +4,7 @@ import com.raj.travels.udan.connection_service.service.ConnectionService;
 import com.raj.travels.udan.travel_domain.dto.connection.AuthenticationResponse;
 import com.raj.travels.udan.travel_domain.enums.connection.ConnectionType;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.data.repository.query.Param;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,12 +23,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/connections")
 @RequiredArgsConstructor
+@Slf4j
 public class ConnectionController {
     private final ConnectionService connectionService;
 
     @GetMapping("/amadeus/{connection}")
     public ResponseEntity<AuthenticationResponse> getAmadeusAuthenticationToken(
             @PathVariable("connection") String connection) {
+        log.info("Received request to get Amadeus authentication token for connection: {}",connection);
         ConnectionType connectionType = ConnectionType.fromServiceId(connection);
         AuthenticationResponse response = connectionService.getConnection(connectionType);
         return ResponseEntity.ok(response);
