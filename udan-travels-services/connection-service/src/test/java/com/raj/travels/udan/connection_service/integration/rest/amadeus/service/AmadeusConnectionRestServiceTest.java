@@ -29,6 +29,6 @@ class AmadeusConnectionRestServiceTest {
 
         assertNotNull(authenticationDetails);
         assertNotNull(authenticationDetails.getSecurityToken());
-        assertTrue(authenticationDetails.getSecurityToken().isEmpty());
+        assertFalse(authenticationDetails.getSecurityToken().isEmpty());
     }
 }
