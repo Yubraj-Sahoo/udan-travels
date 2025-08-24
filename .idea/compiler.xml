@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="travel-domain" />
         <module name="connection-service" />
+        <module name="flight-search-service" />
       </profile>
     </annotationProcessing>
   </component>

@@ -1,8 +1,10 @@
 package com.raj.travels.udan.travel_domain.dto.connection;
 
 import com.raj.travels.udan.travel_domain.enums.connection.ConnectionType;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * Represents the response containing security details for a connection.
@@ -14,8 +16,11 @@ import lombok.Data;
  */
 @Data
 @Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class AuthenticationResponse {
     private String status;
+    private String errorMessage;
     private String securityToken;
     private ConnectionType tokenType;
     private String expiresIn;

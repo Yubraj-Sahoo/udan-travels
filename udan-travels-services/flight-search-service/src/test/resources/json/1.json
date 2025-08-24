@@ -1,0 +1,68 @@
+{
+  "currencyCode": "USD",
+  "originDestinations": [
+    {
+      "id": "1",
+      "originLocationCode": "DEL",
+      "originRadius": 300,
+       "alternativeOriginsCodes" : ["AMD"],
+      "destinationLocationCode": "DXB",
+      "destinationRadius": 300,
+       "alternativeDestinationsCodes" : ["AUH"],
+      "departureDateTimeRange": {
+        "date": "2025-08-15"
+         ,
+         "time": "10:30:00",
+         "dateWindow": "I2D",
+         "timeWindow": "4H"
+      }
+    },
+    {
+      "id": "2",
+      "originLocationCode": "DXB",
+      "destinationLocationCode": "DEL",
+      "departureDateTimeRange": {
+        "date": "2025-09-05"
+      }
+    }
+  ],
+  "travelers": [
+    {
+      "id": "1",
+      "travelerType": "ADULT"
+    }
+  ],
+  "sources": [
+    "GDS"
+  ],
+  "searchCriteria": {
+    "addOneWayOffers":true,
+    "maxFlightOffers": 2,
+    "additionalInformation": {
+      "chargeableCheckedBags": true,
+      "brandedFares": true
+    },
+     "pricingOptions":{
+         "includedCheckedBagsOnly":"true",
+         "refundableFare":"true",
+         "noPenaltyFare":true
+     },
+    "flightFilters": {
+      "cabinRestrictions": [
+        {
+          "cabin": "BUSINESS",
+          "coverage": "MOST_SEGMENTS",
+          "originDestinationIds": [
+            "1",
+            "2"
+          ]
+        }
+      ],
+      "carrierRestrictions": {
+        "includedCarrierCodes": [
+          "AI"
+        ]
+      }
+    }
+  }
+}

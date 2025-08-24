@@ -30,20 +30,4 @@ class ConnectionCredentialsRepositoryTest {
         assertNotNull(connectionCredentials.getApiKey(), "API Key should not be null");
         assertNotNull(connectionCredentials.getApiSecret(), "API secret should not be null");
     }
-
-    @Test
-    @Disabled("Due to connected with original database, this test is disabled")
-    void testInsertConnectionCredentials() {
-        ConnectionCredentials connectionCredentials = new ConnectionCredentials();
-
-        connectionCredentials.setConnectionType(ConnectionType.Y_FLIGHT);
-        connectionCredentials.setGdsType(GdsType.AMADEUS);
-        connectionCredentials.setGrantType("");
-        connectionCredentials.setApiKey("");
-        connectionCredentials.setApiSecret("");
-
-        connectionCredentialsRepository.save(connectionCredentials);
-
-        assertNotNull(connectionCredentials);
-    }
 }

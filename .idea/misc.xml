@@ -7,6 +7,7 @@
         <option value="$PROJECT_DIR$/udan-travels-services/pom.xml" />
         <option value="$PROJECT_DIR$/udan-travels-services/travel-domain/pom.xml" />
         <option value="$PROJECT_DIR$/udan-travels-services/connection-service/pom.xml" />
+        <option value="$PROJECT_DIR$/udan-travels-services/flight-search-service/pom.xml" />
       </list>
     </option>
   </component>

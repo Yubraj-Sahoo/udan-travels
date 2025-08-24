@@ -13,7 +13,7 @@ import lombok.Getter;
 @Getter
 public enum GdsType {
 
-    AMADEUS("Amadeus");
+    AMADEUS("amadeus");
 
     private final String name;
 

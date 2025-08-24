@@ -11,6 +11,7 @@
     <modules>
         <module>travel-domain</module>
         <module>connection-service</module>
+        <module>flight-search-service</module>
     </modules>
 
     <properties>
