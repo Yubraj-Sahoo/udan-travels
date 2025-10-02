@@ -1,0 +1,6 @@
+com\raj\travels\commons\db\entities\base\BaseEntity.class
+com\raj\travels\commons\enums\Pseudocode.class
+com\raj\travels\commons\UdanTravelCommonsApplication.class
+com\raj\travels\commons\enums\GdsType.class
+com\raj\travels\commons\converters\EncryptionConverter.class
+com\raj\travels\commons\converters\JsonConverter.class
