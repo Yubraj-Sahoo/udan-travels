@@ -1,6 +1,6 @@
 package com.raj.travels.udan.connection_service.rest;
 
-import com.raj.travels.commons.dto.ConnectionResponse;
+import com.raj.travels.commons.dto.connection.ConnectionResponse;
 import com.raj.travels.udan.connection_service.db.entities.ConnectionCredentials;
 
 /**

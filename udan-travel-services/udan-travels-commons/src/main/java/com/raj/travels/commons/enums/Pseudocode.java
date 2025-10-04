@@ -11,6 +11,21 @@ public enum Pseudocode {
         this.gdsType = gdsType;
     }
 
-    private String code;
-    private GdsType gdsType;
+    private final String code;
+    private final GdsType gdsType;
+
+    /**
+     * This method returns the Pseudocode enum constant corresponding to the given code.
+     *
+     * @param code the pseudocode.
+     * @return the pseudocode.
+     */
+    public static Pseudocode fromCode(String code) {
+        for (Pseudocode pseudocode : Pseudocode.values()) {
+            if (pseudocode.getCode().equalsIgnoreCase(code)) {
+                return pseudocode;
+            }
+        }
+        return null;
+    }
 }

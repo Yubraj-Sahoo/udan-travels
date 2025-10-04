@@ -1,11 +1,14 @@
 package com.raj.travels.udan.connection_service.rest.amadeus.mappers.response.impl;
 
-import com.raj.travels.commons.dto.ConnectionResponse;
+import com.raj.travels.commons.dto.connection.ConnectionResponse;
 import com.raj.travels.udan.connection_service.db.entities.ConnectionCredentials;
 import com.raj.travels.udan.connection_service.dto.amadeus.AmadeusOAuth2TokenDto;
 import com.raj.travels.udan.connection_service.exceptions.ConnectionFailedException;
 import com.raj.travels.udan.connection_service.rest.amadeus.mappers.response.AmadeusConnectionResponseMapper;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
+
+import static com.raj.travels.udan.connection_service.constants.MessageConstant.CONNECTION_SUCCESS;
 
 @Service
 public class AmadeusConnectionResponseMapperImpl implements AmadeusConnectionResponseMapper {
@@ -22,6 +25,8 @@ public class AmadeusConnectionResponseMapperImpl implements AmadeusConnectionRes
             throw new ConnectionFailedException("Failed to fetch Amadeus connection: auth2Token is null");
         }
         return ConnectionResponse.builder()
+                .status(HttpStatus.OK)
+                .message(CONNECTION_SUCCESS)
                 .pseudocode(connectionCredentials.getPseudocode())
                 .securityToken(auth2Token.getAccessToken())
                 .expiresIn((long) auth2Token.getExpiresIn())

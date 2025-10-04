@@ -1,0 +1,11 @@
+{
+  "type": "amadeusOAuth2Token",
+  "username": "yubraj2000yubraj@gmail.com",
+  "application_name": "udan-travels",
+  "client_id": "tLqvylMAANuPeonqEq07Aa78gAGXG4T7",
+  "token_type": "Bearer",
+  "access_token": "NwZkoPiT1VbrCwFbwS86G6mw1LeO",
+  "expires_in": 1799,
+  "state": "approved",
+  "scope": ""
+}

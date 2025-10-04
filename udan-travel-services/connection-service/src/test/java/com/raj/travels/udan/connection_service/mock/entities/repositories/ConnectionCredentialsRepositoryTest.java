@@ -1,4 +1,4 @@
-package com.raj.travels.udan.connection_service.mock;
+package com.raj.travels.udan.connection_service.mock.entities.repositories;
 
 import com.raj.travels.commons.converters.JsonConverter;
 import com.raj.travels.commons.enums.Pseudocode;

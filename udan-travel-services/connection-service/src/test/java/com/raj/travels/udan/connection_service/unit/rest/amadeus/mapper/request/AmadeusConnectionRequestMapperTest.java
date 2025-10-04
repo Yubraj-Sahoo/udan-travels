@@ -15,7 +15,8 @@ import org.springframework.util.MultiValueMap;
 import static org.junit.jupiter.api.Assertions.*;
 
 class AmadeusConnectionRequestMapperTest {
-    AmadeusConnectionRequestMapper amadeusConnectionRequestMapper = new AmadeusConnectionRequestMapperImpl();
+    private final AmadeusConnectionRequestMapper amadeusConnectionRequestMapper =
+            new AmadeusConnectionRequestMapperImpl();
 
     @Test
     void testBuild() {

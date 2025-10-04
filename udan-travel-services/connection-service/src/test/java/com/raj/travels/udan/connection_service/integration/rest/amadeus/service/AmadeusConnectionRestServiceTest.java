@@ -1,7 +1,7 @@
 package com.raj.travels.udan.connection_service.integration.rest.amadeus.service;
 
 import com.raj.travels.commons.converters.JsonConverter;
-import com.raj.travels.commons.dto.ConnectionResponse;
+import com.raj.travels.commons.dto.connection.ConnectionResponse;
 import com.raj.travels.udan.connection_service.db.entities.ConnectionCredentials;
 import com.raj.travels.udan.connection_service.rest.amadeus.service.AmadeusConnectionRestService;
 import org.junit.jupiter.api.Disabled;
