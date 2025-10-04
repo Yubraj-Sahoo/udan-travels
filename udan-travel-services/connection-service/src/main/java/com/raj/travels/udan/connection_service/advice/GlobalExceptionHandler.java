@@ -1,7 +1,6 @@
 package com.raj.travels.udan.connection_service.advice;
 
 import com.raj.travels.commons.dto.connection.ConnectionResponse;
-import com.raj.travels.udan.connection_service.constants.MessageConstant;
 import com.raj.travels.udan.connection_service.exceptions.ConnectionFailedException;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -9,8 +8,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 
+import static com.raj.travels.udan.connection_service.constants.MessageConstant.CONNECTION_ERROR;
 import static com.raj.travels.udan.connection_service.constants.MessageConstant.CONNECTION_FAILED;
-import static com.raj.travels.udan.connection_service.constants.MessageConstant.CONNECTION_SUCCESS;
 
 @RestControllerAdvice
 @Slf4j
@@ -20,7 +19,7 @@ public class GlobalExceptionHandler {
         log.error("While processing request, an error occurred: {}", ex.getMessage(), ex);
         ConnectionResponse errorResponse = ConnectionResponse.builder()
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
-                .message(CONNECTION_SUCCESS)
+                .message(CONNECTION_ERROR)
                 .build();
 
         return new ResponseEntity<>(errorResponse, HttpStatus.INTERNAL_SERVER_ERROR);

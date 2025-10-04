@@ -81,9 +81,8 @@ class AmadeusConnectionRestServiceTest {
                 Mockito.eq(AmadeusOAuth2TokenDto.class)
         )).thenReturn(null);
 
-        Assertions.assertThrows(ConnectionFailedException.class, () -> {
-            amadeusConnectionRestService.fetchConnection(connectionCredentials);
-        });
+        Assertions.assertThrows(ConnectionFailedException.class, () ->
+                amadeusConnectionRestService.fetchConnection(connectionCredentials));
     }
 
     @Test
@@ -97,8 +96,7 @@ class AmadeusConnectionRestServiceTest {
                 Mockito.eq(AmadeusOAuth2TokenDto.class)
         )).thenReturn(auth2TokenDto);
 
-        Assertions.assertThrows(ConnectionFailedException.class, () -> {
-            amadeusConnectionRestService.fetchConnection(null);
-        });
+        Assertions.assertThrows(ConnectionFailedException.class, () ->
+                amadeusConnectionRestService.fetchConnection(null));
     }
 }
