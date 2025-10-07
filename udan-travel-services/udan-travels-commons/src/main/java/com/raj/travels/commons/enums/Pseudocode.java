@@ -4,7 +4,8 @@ import lombok.Getter;
 
 @Getter
 public enum Pseudocode {
-    UDAN("UDAN", GdsType.AMADEUS);
+    UDAN("UDAN", GdsType.AMADEUS),
+    UDT("UDT", GdsType.SABRE);
 
     Pseudocode(String code, GdsType gdsType) {
         this.code = code;

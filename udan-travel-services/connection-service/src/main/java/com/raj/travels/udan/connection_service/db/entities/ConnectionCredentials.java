@@ -6,6 +6,7 @@ import com.raj.travels.commons.enums.Pseudocode;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 /**
  * Entity representing connection credentials for external services.
@@ -17,6 +18,7 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
+@ToString
 @Table(name = "connection_credentials")
 public class ConnectionCredentials extends BaseEntity {
     @Column(nullable = false)
